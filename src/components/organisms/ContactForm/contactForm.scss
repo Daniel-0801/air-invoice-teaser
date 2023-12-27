@@ -1,0 +1,809 @@
+$CONTENTS_MAX_WIDTH_PX: 1060px;
+$BREAK_POINT: 768px;
+$MAIN_COLOR: #20aee5;
+$BLACK38: #00000061;
+$LIGHT_GRAY: #ccc;
+$SILVER_GRAY: #999;
+$WHITE_SMOKE: #eee;
+
+form#mktoForm_3282 {
+  width: min($CONTENTS_MAX_WIDTH_PX, 100%) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  // 共通
+  div.mktoFormRow {
+    padding: 16px 0 !important;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      min-height: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      padding: 24px 0 0 !important;
+    }
+
+    div.mktoFieldWrap {
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: left !important;
+      width: 100% !important;
+
+      .mktoGutter {
+        width: 0 !important;
+
+        @media (max-width: $BREAK_POINT) {
+          height: 0 !important;
+        }
+      }
+
+      .mktoLogicalField {
+        padding: 0 !important;
+      }
+
+      @media (max-width: $BREAK_POINT) {
+        flex-direction: column !important;
+        align-items: start !important;
+      }
+    }
+
+    .mktoAsterix {
+      display: none;
+    }
+  }
+
+  // 入力項目
+  label.mktoLabel {
+    min-width: 304px !important;
+    margin-right: 48px !important;
+    padding: 0 0 0 40px !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    background-image: url("../../../images/icon/mandatory-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0;
+
+    @media (max-width: $BREAK_POINT) {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  // チェックボックス
+  input.mktoField[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 4px !important;
+    margin-right: 12px !important;
+    border-color: $BLACK38 !important;
+  }
+
+  // ラジオボックス
+  input.mktoField[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    margin-top: 2px !important;
+    margin-right: 14px !important;
+    border-color: $BLACK38 !important;
+  }
+
+  // タイトル
+  div.mktoFormRow:first-of-type {
+    padding: 0 !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+
+    .mktoHtmlText {
+      width: 100% !important;
+    }
+  }
+
+  // お問い合わせ項目
+  div.mktoFormRow:nth-of-type(2) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoCheckboxList {
+      label {
+        margin: 0 0 8px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+        @media (max-width: $BREAK_POINT) {
+          margin-left: 30px !important;
+        }
+      }
+
+      label:last-child {
+        margin: 0 !important;
+      }
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+  }
+
+  // お問い合わせ内容
+  div.mktoFormRow:nth-of-type(3) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 706px !important;
+      height: 96px !important;
+      padding: 0 !important;
+      border: solid;
+      border-color: $BLACK38;
+      border-width: 1px;
+      border-radius: 4px;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 336px !important;
+        height: 96px !important;
+      }
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+  }
+
+  //　導入希望時期
+  div.mktoFormRow:nth-of-type(4) {
+    padding-bottom: 12px !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoTextField {
+      width: 354px !important;
+      height: 48px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: solid !important;
+      border-color: $BLACK38 !important;
+      border-width: 1px !important;
+      border-radius: 4px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 336px !important;
+        height: 48px !important;
+      }
+    }
+
+    ::placeholder {
+      padding-left: 12px !important;
+      color: $BLACK38 !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    label.mktoLabel {
+      background-image: url("../../../images/icon/optional-icon.svg");
+    }
+  }
+
+  // 事業者条件の確認、必要書類の確認
+  div.mktoFormRow:nth-of-type(6),
+  div.mktoFormRow:nth-of-type(8) {
+    padding-bottom: 0 !important;
+    border: none !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoRadioList {
+      width: 708px !important;
+      padding: 0 !important;
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+
+      label {
+        margin: 0 0 8px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+        @media (max-width: $BREAK_POINT) {
+          margin-left: 30px !important;
+        }
+      }
+
+      label:last-child {
+        margin: 0 0 4px !important;
+      }
+    }
+
+    label.mktoLabel {
+      background-image: url("../../../images/icon/optional-icon.svg");
+    }
+  }
+
+  // メールアドレス、電話番号
+  div.mktoFormRow:nth-of-type(10),
+  div.mktoFormRow:nth-of-type(11) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    input {
+      width: 354px !important;
+      height: 48px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: solid;
+      border-color: $BLACK38;
+      border-width: 1px;
+      border-radius: 4px;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 336px !important;
+        height: 48px !important;
+      }
+    }
+
+    ::placeholder {
+      padding-left: 12px !important;
+      color: $BLACK38 !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+  }
+
+  // 電話連絡のご希望の時間帯
+  div.mktoFormRow:nth-of-type(12) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoRadioList {
+      padding: 0 !important;
+
+      label {
+        margin: 0 0 8px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+        @media (max-width: $BREAK_POINT) {
+          margin-left: 30px !important;
+          border: none !important;
+        }
+      }
+
+      label:last-child {
+        margin: 0 !important;
+      }
+    }
+
+    label.mktoLabel {
+      background-image: url("../../../images/icon/optional-icon.svg");
+    }
+  }
+
+  // 法人名と店舗名の共通レイアウト
+  @mixin commonLayout($background-image: url("../../../images/icon/mandatory-icon.svg")) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    input {
+      width: 706px !important;
+      height: 48px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: solid !important;
+      border-color: $BLACK38 !important;
+      border-width: 1px !important;
+      border-radius: 4px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 336px !important;
+      }
+    }
+
+    ::placeholder {
+      padding-left: 12px !important;
+      color: $BLACK38 !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    label.mktoLabel {
+      background-image: $background-image;
+    }
+  }
+
+  // 法人名
+  div.mktoFormRow:nth-of-type(13) {
+    @include commonLayout(url("../../../images/icon/optional-icon.svg"));
+  }
+
+  // 店舗名
+  div.mktoFormRow:nth-of-type(14) {
+    @include commonLayout;
+  }
+
+  // ご担当者様の氏名
+  div.mktoFormRow:nth-of-type(15) {
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: 1098px) {
+      display: flex !important;
+      flex-flow: column !important;
+    }
+
+    .mktoFieldWrap {
+      @media (max-width: 1098px) {
+        flex-flow: column !important;
+      }
+    }
+
+    // 性
+    .mktoFormCol:nth-child(1) {
+      label {
+        width: 352px !important;
+        margin: 0 !important;
+        @media (max-width: 1098px) {
+          margin-bottom: 8px !important;
+        }
+      }
+    }
+
+    // 名
+    .mktoFormCol:nth-child(2) {
+      label {
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding-left: 46px !important;
+        @media (max-width: 1098px) {
+          margin-top: 12px !important;
+        }
+      }
+    }
+
+    input {
+      width: 300px !important;
+      height: 48px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: solid !important;
+      border-color: $BLACK38 !important;
+      border-width: 1px !important;
+      border-radius: 4px !important;
+
+      @media (max-width: 1098px) {
+        width: 336px !important;
+      }
+    }
+
+    ::placeholder {
+      padding-left: 12px !important;
+      color: $BLACK38 !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    @media (max-width: 1098px) {
+      border: none !important;
+    }
+  }
+
+  // Airインボイス利用状況
+  div.mktoFormRow:nth-of-type(16) {
+    padding-bottom: 0 !important;
+    border: none !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoRadioList {
+      width: 708px !important;
+      padding: 0 !important;
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+
+      label {
+        margin: 0 0 8px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+        @media (max-width: $BREAK_POINT) {
+          margin-left: 30px !important;
+        }
+      }
+
+      label:last-child {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  // AirID（アカウント名）、店舗番号
+  div.mktoFormRow:nth-of-type(17),
+  div.mktoFormRow:nth-of-type(19) {
+    padding-bottom: 12px !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+    }
+
+    .mktoTextField {
+      width: 354px !important;
+      height: 48px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: solid !important;
+      border-color: $BLACK38 !important;
+      border-width: 1px !important;
+      border-radius: 4px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 336px !important;
+        height: 48px !important;
+      }
+    }
+
+    ::placeholder {
+      padding-left: 12px !important;
+      color: $BLACK38 !important;
+      font-size: 16px !important;
+      line-height: 22px !important;
+    }
+
+    label.mktoLabel {
+      background-image: url("../../../images/icon/optional-icon.svg");
+    }
+  }
+
+  // 注釈（導入希望時期）
+  div.mktoFormRow:nth-of-type(5) {
+    padding-top: 0 !important;
+    color: $SILVER_GRAY !important;
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+      padding-left: 352px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding: 0 !important;
+      }
+    }
+
+    .mktoFieldWrap {
+      .mktoHtmlText {
+        width: 100% !important;
+        font-size: 12px !important;
+        line-height: 14px !important;
+      }
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFormCol:nth-child(1) {
+      height: 0 !important;
+    }
+  }
+
+  // 注釈（事業者条件の確認）
+  div.mktoFormRow:nth-of-type(7) {
+    padding-top: 0 !important;
+    color: $SILVER_GRAY !important;
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+      padding-left: 352px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding: 0 !important;
+      }
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFieldWrap {
+      .mktoHtmlText {
+        width: 100% !important;
+        padding-left: 32px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+      }
+    }
+
+    a {
+      padding: 0 12px 0 0 !important;
+      color: $MAIN_COLOR !important;
+      text-decoration: underline;
+      background-image: url("../../../images/icon/link-icon.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 12px 12px;
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFormCol:nth-child(1) {
+      height: 0 !important;
+    }
+  }
+
+  // 注釈（必要書類の確認）
+  div.mktoFormRow:nth-of-type(9) {
+    padding-top: 0 !important;
+    color: $SILVER_GRAY !important;
+    border-color: $WHITE_SMOKE !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      border: none !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+      padding-left: 352px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding: 0 !important;
+      }
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFieldWrap {
+      .mktoHtmlText {
+        width: 100% !important;
+        padding-left: 32px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+      }
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFormCol:nth-child(1) {
+      height: 0 !important;
+    }
+  }
+
+  // 注釈（AirID)
+  div.mktoFormRow:nth-of-type(18) {
+    padding-top: 0 !important;
+    color: $SILVER_GRAY !important;
+
+    .mktoFormCol {
+      width: 100% !important;
+      padding-left: 352px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding: 0 !important;
+      }
+    }
+
+    .mktoFieldWrap {
+      .mktoHtmlText {
+        width: 100% !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+      }
+    }
+
+    a {
+      padding: 0 12px 0 0 !important;
+      color: $MAIN_COLOR !important;
+      text-decoration: underline;
+      background-image: url("../../../images/icon/link-icon.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 12px 12px;
+    }
+
+    ul,
+    li {
+      margin-left: 8px !important;
+      padding: 0 !important;
+      list-style: disc;
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFormCol:nth-child(1) {
+      height: 0 !important;
+    }
+  }
+
+  // 注釈（店舗番号）
+  div.mktoFormRow:nth-of-type(20) {
+    padding: 0 0 68px !important;
+    color: $SILVER_GRAY !important;
+    border-color: $LIGHT_GRAY !important;
+    border-bottom: solid !important;
+    border-bottom-width: 1px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      padding-bottom: 48px !important;
+    }
+
+    .mktoFormCol {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding: 0 !important;
+      }
+    }
+
+    .mktoFieldWrap {
+      .mktoHtmlText {
+        width: 304px !important;
+        height: 72px !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+
+        @media (max-width: $BREAK_POINT) {
+          width: 100% !important;
+        }
+      }
+    }
+
+    a {
+      padding: 0 12px 0 0 !important;
+      color: $MAIN_COLOR !important;
+      text-decoration: underline !important;
+      background-image: url("../../../images/icon/link-icon.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 12px 12px;
+    }
+
+    ul,
+    li {
+      display: inline;
+      padding: 0 !important;
+    }
+
+    span {
+      display: none !important;
+    }
+
+    .mktoFormCol:nth-child(1) {
+      height: 0 !important;
+    }
+  }
+
+  // 利用規約・プラポリ
+  div.mktoFormRow:nth-of-type(21) {
+    display: flex !important;
+    justify-content: center !important;
+    padding: 32px 0 24px !important;
+
+    .mktoHtmlText {
+      display: flex !important;
+      justify-content: center !important;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    a {
+      padding: 0 12px 0 0 !important;
+      color: $MAIN_COLOR !important;
+      text-decoration: underline !important;
+      background-image: url("../../../images/icon/link-icon.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 12px 12px;
+    }
+  }
+
+  div.mktoFormRow:nth-of-type(22) {
+    padding: 0 !important;
+  }
+
+  // ボタン
+  div.mktoButtonRow {
+    position: static !important;
+    display: block;
+    text-align: center !important;
+  }
+
+  span.mktoButtonWrap {
+    margin: 0 !important;
+  }
+
+  button.mktoButton {
+    position: relative !important;
+    width: min(100%, 442px) !important;
+    padding: 26px 40px !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    background: $MAIN_COLOR !important;
+    background-image: url("../../../images/icon/right-arrow-icon.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 16px bottom 50% !important;
+    background-size: 10px auto !important;
+    border: none !important;
+    border-radius: 6px;
+    box-shadow: inset 0 -3px 0 rgb(0 0 0 / 25%);
+
+    &:active {
+      box-shadow: 0 0;
+      transform: translate(0, 1px);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

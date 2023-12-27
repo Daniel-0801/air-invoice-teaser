@@ -1,0 +1,654 @@
+$CONTENTS_MAX_WIDTH: 1016px;
+$BREAK_POINT: 768px;
+$PC_BREAK_POINT: 769px;
+$MAIN_COLOR: #20aee5;
+$BLACK38: #00000061;
+$BLACK87: #000000de;
+$GRAY_SILVER: #cccccc;
+$WHITE: #fff;
+$REQUIRED_MARK: #f55852;
+$Blue_Link: #0892c7;
+$Radio_Blue: #409eff;
+
+form#mktoForm_3693 {
+  width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+
+  @media (max-width: $BREAK_POINT) {
+    padding: 0 !important;
+  }
+
+  div.mktoFieldWrap {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+
+    @media (max-width: $BREAK_POINT) {
+      flex-direction: column !important;
+      align-items: start !important;
+    }
+  }
+
+  // 入力項目
+  label.mktoLabel {
+    color: $BLACK87 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    width: fit-content !important;
+
+    @media (min-width: $PC_BREAK_POINT) {
+      width: fit-content !important;
+      margin-bottom: 8px;
+    }
+  }
+
+  // 入力フォーム
+  input.mktoField,
+  select.mktoField {
+    padding: 12px 15px 8px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    border: 1px solid $GRAY_SILVER !important;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: $BLACK38 !important;
+      font-size: 14px;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  // 必須マーク
+  div.mktoAsterix {
+    font-size: 14px !important;
+    color: $REQUIRED_MARK !important;
+
+    @media (max-width: $BREAK_POINT) {
+      padding-left: 4px !important;
+      float: right !important;
+    }
+  }
+
+  div.mktoGutter {
+    display: block !important;
+    width: 4px !important;
+    height: 4px !important;
+  }
+
+  // 担当者名
+  div.mktoFormRow:first-of-type {
+    display: flex;
+    margin-bottom: 24px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      flex-direction: column !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+    }
+
+    // 性
+    .mktoFormCol:nth-child(1) {
+      margin-bottom: 0 !important;
+
+      @media (min-width: $PC_BREAK_POINT) {
+        width: 100% !important;
+      }
+
+      @media (max-width: $BREAK_POINT) {
+      }
+
+      .mktoOffset {
+        width: 0 !important;
+      }
+
+      @media (min-width: $PC_BREAK_POINT) {
+        // margin-right: 24px !important;
+      }
+    }
+
+    // 名
+    .mktoFormCol:nth-of-type(2) {
+      margin-bottom: 0 !important;
+
+      @media (min-width: $PC_BREAK_POINT) {
+        width: 50% !important;
+      }
+
+      .mktoOffset:nth-child(1) {
+        width: 24px !important;
+        height: 0 !important;
+      }
+
+      .mktoFieldWrap {
+        justify-content: flex-end !important;
+
+        .mktoAsterix {
+          visibility: hidden !important;
+          @media (min-width: $PC_BREAK_POINT) {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  // 担当者名
+  div.mktoFormRow:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px !important;
+    margin: 0 auto;
+
+    @media (max-width: $BREAK_POINT) {
+      display: block;
+    }
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        margin-bottom: 24px !important;
+      }
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  #LblFirstName {
+    div.mktoAsterix {
+      visibility: hidden;
+      @media (max-width: $BREAK_POINT) {
+        visibility: visible;
+      }
+    }
+  }
+
+  .mktoFormCol:nth-of-type(2) {
+    margin-left: 24px;
+
+    @media (max-width: $BREAK_POINT) {
+      margin-left: 0;
+    }
+  }
+
+  //　メールアドレス
+  div.mktoFormRow:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px !important;
+    margin: 0 auto;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 電話番号
+  div.mktoFormRow:nth-of-type(4) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px !important;
+    margin: 0 auto;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 振込を伴う請求書枚数
+  div.mktoFormRow:nth-of-type(5) {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $BREAK_POINT) {
+      margin-bottom: 24px;
+    }
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+      color: $BLACK87 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    .mktoField {
+      width: 100% !important;
+    }
+
+    .mktoFieldWrap {
+      float: none !important;
+    }
+
+    a {
+      padding: 0;
+      color: $MAIN_COLOR;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+    }
+
+    // 入力フォームと注意書きの間の線
+    .mktoFormCol {
+      width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+      margin-bottom: 0 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 業種
+  div.mktoFormRow:nth-of-type(6) {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $BREAK_POINT) {
+      margin-bottom: 24px;
+    }
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+      color: $BLACK87 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    .mktoField {
+      width: 100% !important;
+    }
+
+    .mktoFieldWrap {
+      float: none !important;
+    }
+
+    a {
+      padding: 0;
+      color: $MAIN_COLOR;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+    }
+
+    .mktoFormCol {
+      margin-bottom: 24px !important;
+      width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+      margin-bottom: 0 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 問い合わせ内容
+  div.mktoFormRow:nth-of-type(7) {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+    }
+
+    .mktoLabel {
+      margin-bottom: 16px !important;
+    }
+
+    .mktoRadioList {
+      padding: 0 !important;
+      position: relative;
+    }
+
+    .mktoField {
+      @media (max-width: $BREAK_POINT) {
+        width: 13px !important;
+      }
+    }
+
+    // ラジオボタンのinputは透過させる
+    .mktoRadioList {
+      label {
+        margin-bottom: 16px !important;
+      }
+      input[type="radio"] {
+        opacity: 0;
+        position: absolute;
+      }
+
+      // チェックされる前の丸
+      #mktoRadio_32899_0 + label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+
+      #mktoRadio_32899_1 + label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 20;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+
+      #mktoRadio_32899_2 + label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 30;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+
+      #mktoRadio_32899_3 + label::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 40;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+
+      // チェックされた時の丸
+      #mktoRadio_32899_0:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2.6%;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        background: #20aee5;
+        border-radius: 50%;
+      }
+
+      #mktoRadio_32899_1:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 27.4%;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        background: #20aee5;
+        border-radius: 50%;
+      }
+
+      #mktoRadio_32899_2:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 52%;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        background: #20aee5;
+        border-radius: 50%;
+
+        @media (max-width: $BREAK_POINT) {
+          top: 52.3%;
+        }
+      }
+
+      #mktoRadio_32899_3:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 76.5%;
+        left: 2px;
+        width: 10px;
+        height: 10px;
+        background: #20aee5;
+        border-radius: 50%;
+
+        @media (max-width: $BREAK_POINT) {
+          top: 76.6%;
+        }
+      }
+    }
+  }
+
+  // その他
+  div.mktoFormRow:nth-of-type(8) {
+    display: flex;
+    justify-content: center;
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+      color: $BLACK87 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    .mktoField {
+      width: 100% !important;
+    }
+
+    .mktoFieldWrap {
+      float: none !important;
+    }
+
+    label.mktoLabel {
+      font-weight: 300 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        margin-top: 44px;
+      }
+    }
+
+    textarea.mktoField {
+      height: 140px;
+      padding: 12px 15px 8px !important;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      line-height: 24px !important;
+      border: 1px solid $GRAY_SILVER !important;
+      border-radius: 4px;
+
+      &::placeholder {
+        color: $BLACK38 !important;
+        font-size: 14px;
+        font-weight: 400 !important;
+        font-size: 14px !important;
+      }
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    .mktoFormCol {
+      margin-bottom: 24px !important;
+      width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+      margin-bottom: 0 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 注意書き
+  div.mktoFormRow:nth-of-type(9) {
+    line-height: 16px;
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        margin-top: 8px;
+        width: 100% !important;
+      }
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // 注意書き
+  div.mktoFormRow:nth-of-type(10) {
+    padding-top: 32px;
+    font-weight: 300;
+    line-height: 14px;
+
+    @media (max-width: $BREAK_POINT) {
+      padding-top: 28px;
+    }
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+
+      a {
+        color: $Blue_Link;
+        text-decoration-line: underline;
+      }
+    }
+
+    // 入力フォームと注意書きの間の線
+    .mktoFormCol {
+      padding-top: 32px !important;
+      width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+      border-top: solid 1px $GRAY_SILVER !important;
+      margin-bottom: 0 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        padding-top: 28px !important;
+        width: 100% !important;
+      }
+    }
+  }
+
+  // ボタン
+  div.mktoButtonRow {
+    position: static !important;
+    display: block;
+    text-align: center !important;
+    margin-top: 32px !important;
+  }
+
+  span.mktoButtonWrap {
+    margin: 0 !important;
+  }
+
+  button.mktoButton {
+    width: min(100%, 442px) !important;
+    padding: 26px 40px !important;
+    color: $WHITE !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    background: $MAIN_COLOR !important;
+    border: none !important;
+    border-radius: 6px;
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.25);
+    position: relative !important;
+
+    &:active {
+      box-shadow: 0 0;
+      transform: translate(0, 1px);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    background-image: url("../../../images/icon/right-arrow-icon.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 16px bottom 50% !important;
+    background-size: 10px auto !important;
+  }
+}

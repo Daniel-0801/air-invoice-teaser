@@ -1,0 +1,312 @@
+$CONTENTS_MAX_WIDTH: 1016px;
+$BREAK_POINT: 768px;
+$PC_BREAK_POINT: 769px;
+$MAIN_COLOR: #20aee5;
+$BLACK38: #00000061;
+$BLACK87: #000000de;
+$GRAY_SILVER: #cccccc;
+$WHITE: #fff;
+$REQUIRED_MARK: #f55852;
+
+form#mktoForm_3182 {
+  width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+
+  @media (max-width: $BREAK_POINT) {
+    padding: 0 !important;
+  }
+
+  div.mktoFieldWrap {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+
+    @media (max-width: $BREAK_POINT) {
+      flex-direction: column !important;
+      align-items: start !important;
+    }
+  }
+
+  // 入力項目
+  label.mktoLabel {
+    color: $BLACK87 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    width: fit-content !important;
+
+    @media (min-width: $PC_BREAK_POINT) {
+      width: fit-content !important;
+      margin-bottom: 8px;
+    }
+  }
+
+  // 入力フォーム
+  input.mktoField,
+  select.mktoField {
+    padding: 12px 15px 8px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    border: 1px solid $GRAY_SILVER !important;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: $BLACK38 !important;
+      font-size: 14px;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+    }
+
+    @media (max-width: $BREAK_POINT) {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  // 必須マーク
+  div.mktoAsterix {
+    font-size: 14px !important;
+    color: $REQUIRED_MARK !important;
+
+    @media (max-width: $BREAK_POINT) {
+      padding-left: 4px !important;
+      float: right !important;
+    }
+  }
+
+  div.mktoGutter {
+    display: block !important;
+    width: 4px !important;
+    height: 4px !important;
+  }
+
+  // 担当者名
+  div.mktoFormRow:first-of-type {
+    display: flex;
+    margin-bottom: 24px !important;
+
+    @media (max-width: $BREAK_POINT) {
+      flex-direction: column !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+    }
+
+    // 性
+    .mktoFormCol:nth-child(1) {
+      margin-bottom: 0 !important;
+
+      @media (min-width: $PC_BREAK_POINT) {
+        width: 50% !important;
+      }
+
+      @media (max-width: $BREAK_POINT) {
+        margin-bottom: 24px !important;
+      }
+
+      .mktoOffset {
+        width: 0 !important;
+      }
+
+      @media (min-width: $PC_BREAK_POINT) {
+        margin-right: 24px !important;
+      }
+    }
+
+    // 名
+    .mktoFormCol:nth-of-type(2) {
+      margin-bottom: 0 !important;
+
+      @media (min-width: $PC_BREAK_POINT) {
+        width: 50% !important;
+      }
+
+      .mktoOffset:nth-child(1) {
+        width: 24px !important;
+        height: 0 !important;
+      }
+
+      .mktoFieldWrap {
+        justify-content: flex-end !important;
+
+        .mktoAsterix {
+          @media (min-width: $PC_BREAK_POINT) {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  // 業種
+  div.mktoFormRow:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px !important;
+    margin: 0 auto;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    // 業種は必須マークがない分、SP時に入力項目を右に寄せる
+    #Lblinv_nut_industry {
+      @media (max-width: $BREAK_POINT) {
+        padding-left: 10px !important;
+      }
+    }
+  }
+
+  //　メールアドレス
+  div.mktoFormRow:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px !important;
+    margin: 0 auto;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 電話番号
+  div.mktoFormRow:nth-of-type(4) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px !important;
+    margin: 0 auto;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoFormCol {
+      margin-bottom: 0 !important;
+      width: 100% !important;
+    }
+
+    .mktoField {
+      width: 100% !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // 注意書き
+  div.mktoFormRow:nth-of-type(5) {
+    display: flex;
+    justify-content: center;
+
+    .mktoOffset {
+      width: 0 !important;
+    }
+
+    .mktoHtmlText {
+      width: 100% !important;
+      font-size: 12px !important;
+      color: $BLACK87 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+
+    .mktoFieldWrap {
+      float: none !important;
+    }
+
+    a {
+      padding: 0;
+      color: $MAIN_COLOR;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+    }
+
+    // 入力フォームと注意書きの間の線
+    .mktoFormCol {
+      padding-top: 32px !important;
+      width: min($CONTENTS_MAX_WIDTH, 100%) !important;
+      border-top: solid 1px $GRAY_SILVER !important;
+      margin-bottom: 0 !important;
+
+      @media (max-width: $BREAK_POINT) {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // ボタン
+  div.mktoButtonRow {
+    position: static !important;
+    display: block;
+    text-align: center !important;
+    margin-top: 32px !important;
+  }
+
+  span.mktoButtonWrap {
+    margin: 0 !important;
+  }
+
+  button.mktoButton {
+    width: min(100%, 442px) !important;
+    padding: 26px 40px !important;
+    color: $WHITE !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    background: $MAIN_COLOR !important;
+    border: none !important;
+    border-radius: 6px;
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.25);
+    position: relative !important;
+
+    &:active {
+      box-shadow: 0 0;
+      transform: translate(0, 1px);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    background-image: url("../../../images/icon/right-arrow-icon.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 16px bottom 50% !important;
+    background-size: 10px auto !important;
+  }
+}

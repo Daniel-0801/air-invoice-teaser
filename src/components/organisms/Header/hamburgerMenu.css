@@ -1,0 +1,83 @@
+/* バーガーボタンの位置とサイズ */
+.bm-burger-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+  background: #20aee5;
+}
+
+#react-burger-menu-btn {
+  position: sticky !important;
+}
+
+.bm-burger-bars {
+  top: 20% !important;
+  left: 22% !important;
+  width: 32px;
+  height: 3px !important;
+  background: #fff;
+  border-radius: 3px;
+  opacity: 1 !important;
+}
+
+.bm-burger-bars:nth-child(2) {
+  top: 35% !important;
+}
+
+.bm-burger-bars:nth-child(3) {
+  top: 50% !important;
+}
+
+.bm-burger-bars:nth-child(3)::after {
+  position: absolute;
+  top: 8px;
+  color: #fff;
+  font-size: 11px;
+  content: "MENU";
+}
+
+.bm-cross-button {
+  display: none;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  サイドバーのラッパースタイル - アニメーションが壊れる可能性があるため触るときは注意
+  */
+.bm-menu-wrap {
+  position: fixed;
+  top: 56px;
+  right: 0% !important;
+  width: 100% !important;
+  height: 100%;
+}
+
+.bm-menu {
+  font-size: 1em;
+
+  /* background: rgb(0 0 0 / 60%); */
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+.bm-item {
+  top: 0 !important;
+  display: inline-block;
+}
+
+.bm-overlay {
+  top: 56px;
+  left: 0;
+  background: rgb(0 0 0 / 30%);
+}
