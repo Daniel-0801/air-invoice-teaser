@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+html {
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-width: 1200px;
+  margin: 0;
+  background: #fff;
+  color: #555555;
+  font-size: 15px;
+  font-family: "Avenir Next", "Open Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "MS Pゴシック", "MSPGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+article, header, main, section {
+  display: block;
+}
+
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+
+h1, h2 {
+  margin: 0;
+  font-size: 1em;
+}
+
+p, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ol>li {
+  list-style-type: none;
+}
+
+img {
+  border: 0;
+  vertical-align: bottom;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+#header {
+  z-index: 100;
+  margin: 0 auto;
+  border-bottom: 1px solid #ecece9;
+  background-color: #20aee5;
+  color: #fff;
+}
+
+.header-logo {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header-logo-inner {
+  min-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-logo-inner img {
+  width: 172px;
+  vertical-align: bottom;
+}
+
+.container {
+  position: relative;
+  width: 1044px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 32px;
+  -webkit-transform: translateZ(0);
+}
+
+.container:before, .container:after {
+  display: table;
+  content: "";
+}
+
+.policies {
+  margin: 0 auto;
+  padding: 40px 0 80px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.terms-title {
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.terms-section {
+  margin-bottom: 32px;
+}
+
+.terms-header {
+  margin-bottom: 16px;
+}
+
+.terms-list {
+  padding-left: 14px;
+  text-indent: -14px;
+  counter-reset: num;
+}
+
+.terms-list-item {
+  margin-bottom: 12px;
+}
+
+.terms-list.no-num {
+  text-indent: 0;
+}
+
+.terms-list:not(.no-num) .terms-list-item:before {
+  content: counter(num) ".";
+  counter-increment: num;
+}
+
+.inner-list {
+  margin: 8px 0;
+  padding-left: 22px;
+  text-indent: -22px;
+  counter-reset: num_inner;
+}
+
+.inner-list-item:before {
+  content: "("counter(num_inner) ")";
+  counter-increment: num_inner;
+}
+
+#loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 21000;
+  width: 100%;
+}
+
+#loading>img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+#loading:hover {
+  cursor: wait;
+}
