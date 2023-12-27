@@ -121,26 +121,3 @@ $ ENV=staging npm run build
 # 本番環境
 $ ENV=production npm run build
 ```
-
-## Tips
-
-### コミット時の静的チェック
-
-[huksy](https://github.com/typicode/husky)と[lint-staged](https://github.com/okonet/lint-staged)を用いることで、`git commit`の際に各種静的チェックが実行されるよう設定されています。
-
-エラーが出た場合は、`npm run fix`を実行してから再度コミットを行うようにしてください。
-
-### 利用規約ページについて
-
-[利用規約ページ](https://airregi.jp/invoice/terms/)配下は他のページと異なり、Gatsby によって出力されるファイルではなく、静的なアセット (生の HTML、CSS、PDF、画像)をそのまま使用する形式となっています (プロダクト側からアセットが別途渡されることになっていたため)。
-
-`src/static/terms/`配下にファイル群を配置した上でビルドを行うことで、`htdocs/invoice/terms/`配下にビルド成果物が出力され、デプロイの準備が完了します (本番環境にて`/invoice/terms/sbps/`に配置したいファイルは`src/static/terms/sbps/`配下に配置する)。
-
-利用規約ページの詳細については、[#109](https://ghe.misosiru.io/air-design/air-invoice-teaser/pull/109)を参照してください。
-
-また開発の際の注意点として、ページを表示するためには、`npm run serve`でサーバーを起動した場合は`localhost:9000/terms/`にてアクセス可能ですが、
-`npm run develop`でサーバーを起動した場合は`localhost:8000/terms/`ではアクセスできず、`localhost:8000/terms/index.html`に直接アクセスする必要があります。
-
-## その他
-
-[設計・コーディング規約](./docs/convention/README.md)
